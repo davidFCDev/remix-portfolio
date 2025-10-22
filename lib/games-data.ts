@@ -240,4 +240,38 @@ export const games: Game[] = [
       },
     ],
   },
+  {
+    id: "7",
+    title: "Doodle Card Game",
+    subtitle: "Card battler with doodled flair",
+    description:
+      "A Triple Triad-inspired duel where the Doodles NFT crew brings hand-drawn style to tactical matchups. Climb through escalating tiers, decode new rule sets, and outwit the AI to steal its rarest cards.",
+    tags: ["Cards", "Strategy", "Puzzle"],
+    thumbnail: "/images/doodle/Doodles-2.png",
+    videoUrl: "/videos/doodle-clip.mp4",
+    playUrl: "https://remix.gg/g/060ff0c1-c339-4166-bda7-f0672943354c",
+    stats: {
+      plays: "+17.7k",
+      users: "+5.8k",
+      time: "+599h",
+      rating: "83%",
+    },
+    guide: [
+      {
+        title: "Clear every tier",
+        image: "/images/doodle/Doodles-1.png",
+        body: "Each stage stacks on fresh rule modifiers—adapt your deck and sequencing to keep the advantage.",
+      },
+      {
+        title: "Outthink the AI",
+        image: "/images/doodle/Doodles-2.png",
+        body: "Anticipate counter-plays and place higher-value edges to flip adjacent cards in your favor.",
+      },
+      {
+        title: "Steal the prize card",
+        image: "/images/doodle/Doodles-3.png",
+        body: "Beat each rival to claim their signature card and sculpt the most dominant deck on the ladder.",
+      },
+    ],
+  },
 ];
