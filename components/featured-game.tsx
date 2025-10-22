@@ -16,7 +16,7 @@ export function FeaturedGame() {
   const statValues = latestGame.stats ?? {
     plays: "+1K",
     users: "+113",
-    time: "+9 hours",
+    time: "+9h",
     rating: "100%",
   };
   const featureStats = [

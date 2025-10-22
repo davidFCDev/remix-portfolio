@@ -34,7 +34,7 @@ export const games: Game[] = [
     stats: {
       plays: "+1K",
       users: "+127",
-      time: "+11 hours",
+      time: "+11h",
       rating: "100%",
     },
     guide: [
@@ -62,14 +62,37 @@ export const games: Game[] = [
   },
   {
     id: "2",
-    title: "Puzzle Quest",
-    subtitle: "Match-3 adventure game",
+    title: "Outlast Forever",
+    subtitle: "Endless zombie survival",
     description:
-      "Embark on an epic puzzle adventure where every match counts. Solve challenging puzzles, unlock new worlds, and discover hidden treasures in this captivating match-3 game with stunning visuals and engaging gameplay.",
-    tags: ["Puzzle", "Strategy", "Casual"],
-    thumbnail: "/puzzle-quest-mobile-game.jpg",
-    videoUrl: "/puzzle-quest-gameplay.jpg",
-    playUrl: "https://example.com/play/puzzle-quest",
+      "Fight through relentless waves as the undead horde scales with every minute. Swap weapons on the fly, exploit enemy weaknesses, and chain multipliers to claw your way higher on the survivor leaderboards.",
+    tags: ["Arcade", "Survival", "Horror"],
+    thumbnail: "/images/outlast/Outlast-pathdrop.png",
+    videoUrl: "/videos/outlast-clip.mp4",
+    playUrl: "https://remix.gg/g/ee72a5ff-8484-4376-9f4e-310388e7213f",
+    stats: {
+      plays: "+12.7K",
+      users: "+4.5K",
+      time: "+290h",
+      rating: "82%",
+    },
+    guide: [
+      {
+        title: "Outlast the swarm",
+        image: "/images/outlast/Outlast-1.png",
+        body: "Every extra minute survived multiplies your score—keep moving and kite the horde to stay alive.",
+      },
+      {
+        title: "Pick the right weapon",
+        image: "/images/outlast/Outlast-2.png",
+        body: "Each zombie mutation has a weakness. Swap to the matching weapon type to shred through waves efficiently.",
+      },
+      {
+        title: "Grab the best multiplier",
+        image: "/images/outlast/Outlast-3.png",
+        body: "Choose wisely at every portal branch. When overwhelmed, smash the red button to clear breathing room.",
+      },
+    ],
   },
   {
     id: "3",
