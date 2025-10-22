@@ -274,4 +274,33 @@ export const games: Game[] = [
       },
     ],
   },
+  {
+    id: "8",
+    title: "Crypto Mahjong",
+    subtitle: "Meme-coin tile matcher",
+    description:
+      "Collapse trios of meme-coin tiles before the clock expires. Chain clears to flood the board with fresh crypto icons and chase leaderboard-fast completions.",
+    tags: ["Puzzle", "Arcade", "Casual"],
+    thumbnail: "/images/mahjong/Mahjong-3.png",
+    videoUrl: "/videos/mahjong-clip.mp4",
+    playUrl: "https://remix.gg/g/zS0QCi0PfUjO",
+    stats: {
+      plays: "+76.5k",
+      users: "+7k",
+      time: "+6.4k h",
+      rating: "99%",
+    },
+    guide: [
+      {
+        title: "Match trios",
+        image: "/images/mahjong/Mahjong-1.png",
+        body: "Spot three-of-a-kind meme tiles, stack them into your rack, and clear the board before it fills.",
+      },
+      {
+        title: "Beat the clock",
+        image: "/images/mahjong/Mahjong-3.png",
+        body: "Advance through increasingly frantic stages where new layouts and tighter timers test your memory and speed.",
+      },
+    ],
+  },
 ];
