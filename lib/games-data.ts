@@ -7,6 +7,17 @@ export interface Game {
   thumbnail: string;
   videoUrl: string;
   playUrl: string;
+  stats?: {
+    plays: string;
+    users: string;
+    time: string;
+    rating: string;
+  };
+  guide?: Array<{
+    title: string;
+    image: string;
+    body: string;
+  }>;
 }
 
 export const games: Game[] = [
@@ -16,10 +27,38 @@ export const games: Game[] = [
     subtitle: "Platformer inspired by Pudgy Penguins",
     description:
       "Join Pengu for a fast-paced platforming journey born from the Pudgy Penguins universe. Hop across icy islands, solve chilly puzzles, and chase arcade-style high scores through levels that evolve with the community season after season.",
-    tags: ["Platforms", "Arcade", "Puzzle"],
-    thumbnail: "/images/pengu-pathdrop.png",
+    tags: ["Arcade", "Platform", "Puzzle"],
+    thumbnail: "/images/pengu/pengu-pathdrop.png",
     videoUrl: "/videos/pengu-clip.mp4",
-    playUrl: "https://example.com/play/i-am-pengu",
+    playUrl: "https://remix.gg/g/ea8d3337-dda5-448c-a832-967b4dc39be2",
+    stats: {
+      plays: "+1K",
+      users: "+127",
+      time: "+11 hours",
+      rating: "100%",
+    },
+    guide: [
+      {
+        title: "Conquer the first world",
+        image: "/images/pengu/Pengu-1.png",
+        body: "Five handcrafted stages capped by a boss encounter set the tone for Pengu's adventure.",
+      },
+      {
+        title: "Save your runs",
+        image: "/images/pengu/Pengu-2.png",
+        body: "Bookmark your score and return any time to continue climbing the seasonal leaderboards.",
+      },
+      {
+        title: "Use your ability",
+        image: "/images/pengu/Pengu-3.png",
+        body: "Each level ramps up complexity—trigger Pengu's special ability to keep momentum.",
+      },
+      {
+        title: "Chase your best score",
+        image: "/images/pengu/Pengu-4.png",
+        body: "Collect every coin and Pengu egg, stay swift, and push for a record-breaking run.",
+      },
+    ],
   },
   {
     id: "2",

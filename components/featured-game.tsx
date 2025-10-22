@@ -13,10 +13,16 @@ import Link from "next/link";
 
 export function FeaturedGame() {
   const latestGame = games[0];
+  const statValues = latestGame.stats ?? {
+    plays: "+1K",
+    users: "+113",
+    time: "+9 hours",
+    rating: "100%",
+  };
   const featureStats = [
     {
       label: "Plays",
-      value: "+1K",
+      value: statValues.plays,
       Icon: PlayStatIcon,
       bg: "bg-emerald-500/10",
       border: "border-emerald-500/30",
@@ -27,7 +33,7 @@ export function FeaturedGame() {
     },
     {
       label: "Users",
-      value: "+113",
+      value: statValues.users,
       Icon: Users,
       bg: "bg-rose-500/10",
       border: "border-rose-500/30",
@@ -38,7 +44,7 @@ export function FeaturedGame() {
     },
     {
       label: "Time",
-      value: "+9 hours",
+      value: statValues.time,
       Icon: Time,
       bg: "bg-purple-500/10",
       border: "border-purple-500/30",
@@ -49,7 +55,7 @@ export function FeaturedGame() {
     },
     {
       label: "Rating",
-      value: "100%",
+      value: statValues.rating,
       Icon: Rating,
       bg: "bg-amber-500/10",
       border: "border-amber-500/30",
