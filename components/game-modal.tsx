@@ -30,7 +30,7 @@ export function GameModal({ game, open, onOpenChange }: GameModalProps) {
   const statValues = game.stats ?? {
     plays: "+1K",
     users: "+113",
-    time: "+9 hours",
+    time: "+9h",
     rating: "100%",
   };
 
@@ -92,9 +92,6 @@ export function GameModal({ game, open, onOpenChange }: GameModalProps) {
           <div className="relative grid gap-8 p-6 md:p-10 lg:grid-cols-[1.15fr_0.85fr] items-center">
             <div className="space-y-8 text-center lg:text-left">
               <div className="space-y-4">
-                <p className="uppercase tracking-[0.3em] text-xs md:text-sm text-[#B7FF00]/70">
-                  Featured Game
-                </p>
                 <h3 className="text-5xl md:text-6xl font-bold text-balance">
                   {game.title}
                 </h3>
@@ -189,7 +186,7 @@ export function GameModal({ game, open, onOpenChange }: GameModalProps) {
             </div>
 
             <div className="relative w-full flex justify-center">
-              <div className="relative aspect-2/3 w-full max-w-sm lg:max-w-md overflow-hidden rounded-4xl border-2 border-[#B7FF00]/40 max-h-[60vh]">
+              <div className="relative aspect-2/3 w-full max-w-xs sm:max-w-sm lg:max-w-sm xl:max-w-md overflow-hidden rounded-4xl border-[3px] border-[#B7FF00]/40 max-h-[75vh]">
                 {isVideoAsset ? (
                   <video
                     className="h-full w-full object-cover"

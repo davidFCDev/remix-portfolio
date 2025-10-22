@@ -96,14 +96,42 @@ export const games: Game[] = [
   },
   {
     id: "3",
-    title: "Space Defender",
-    subtitle: "Retro space shooter",
+    title: "Forgotten Path",
+    subtitle: "Turn-based RPG battles",
     description:
-      "Defend the galaxy from alien invaders in this retro-inspired space shooter. Upgrade your ship, master powerful weapons, and face increasingly challenging waves of enemies in an homage to classic arcade games.",
-    tags: ["Shooter", "Retro", "Action"],
-    thumbnail: "/space-defender-retro-game.jpg",
-    videoUrl: "/space-defender-gameplay.jpg",
-    playUrl: "https://example.com/play/space-defender",
+      "Assemble a trio of spellcasters—warlock, mage, and priest—and tackle five escalating stages of wave-based combat. Rotate abilities strategically, keep every mage alive, and push through the gauntlet to unlock the secret ending.",
+    tags: ["RPG", "Strategy", "Action"],
+    thumbnail: "/images/forgotten/Forgotten-pathdrop.png",
+    videoUrl: "/videos/forgotten-clip.mp4",
+    playUrl: "https://remix.gg/g/74a152a9-f7b9-4583-9d0d-f2480d681702",
+    stats: {
+      plays: "+8.5K",
+      users: "+4.8K",
+      time: "+320h",
+      rating: "97%",
+    },
+    guide: [
+      {
+        title: "Clear every tier",
+        image: "/images/forgotten/Forgotten-1.png",
+        body: "Each of the four tiers culminates in two waves and a boss—defeat them all to reach the final seal.",
+      },
+      {
+        title: "Keep the mages alive",
+        image: "/images/forgotten/Forgotten-2.png",
+        body: "Warlock, mage, and priest all bring crucial spells. Rotate shields, crowd control, and heals to protect the trio.",
+      },
+      {
+        title: "Study every enemy",
+        image: "/images/forgotten/Forgotten-3.png",
+        body: "Analyze enemy modifiers and adapt your turn order. Experiment with combo chains to break resistances.",
+      },
+      {
+        title: "Consult the monster codex",
+        image: "/images/forgotten/Forgotten-4.png",
+        body: "Need intel mid-run? Check the codex to anticipate attack patterns and prep your counter-magic.",
+      },
+    ],
   },
   {
     id: "4",
