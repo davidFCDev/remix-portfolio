@@ -169,14 +169,42 @@ export const games: Game[] = [
   },
   {
     id: "5",
-    title: "Racing Legends",
-    subtitle: "High-octane racing",
+    title: "Farman Begins",
+    subtitle: "Vertical ascent arcade",
     description:
-      "Feel the adrenaline rush as you race through stunning tracks around the world. Customize your vehicles, compete in tournaments, and become a racing legend in this high-octane mobile racing experience.",
-    tags: ["Racing", "Sports", "Multiplayer"],
-    thumbnail: "/racing-legends-mobile-game.jpg",
-    videoUrl: "/racing-legends-gameplay.jpg",
-    playUrl: "https://example.com/play/racing-legends",
+      "Suit up as rookie superhero Farman and rocket toward the stars. Dodge meteor storms, weave past laser grids, and climb higher with every flawless run.",
+    tags: ["Arcade", "Endless", "Superhero"],
+    thumbnail: "/images/farman/Farman-2.png",
+    videoUrl: "/videos/farman-clip.mp4",
+    playUrl: "https://remix.gg/g/9d9bc5ea-41de-4d68-b56e-953b6731fa25",
+    stats: {
+      plays: "+67.2K",
+      users: "+7.8K",
+      time: "+222h",
+      rating: "93%",
+    },
+    guide: [
+      {
+        title: "Step into Farman's suit",
+        image: "/images/farman/Farman-1.png",
+        body: "Ascend endlessly through the skyline and push your score into heroic territory.",
+      },
+      {
+        title: "Dodge every obstacle",
+        image: "/images/farman/Farman-2.png",
+        body: "Watch for crystalline shards, roaming meteors, and sweeping laser beams—one hit ends the climb.",
+      },
+      {
+        title: "Collect every letter",
+        image: "/images/farman/Farman-3.png",
+        body: "Spell F-A-R-M-A-N mid-flight to unlock devastating superpowers and clear the path ahead.",
+      },
+      {
+        title: "Trigger Super Farman",
+        image: "/images/farman/Farman-4.png",
+        body: "Grow to giant size, smash obstacles effortlessly, and rake in multiplied points before the power fades.",
+      },
+    ],
   },
   {
     id: "6",
