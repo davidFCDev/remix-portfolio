@@ -4,7 +4,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-8 text-center">
         <div className="flex flex-wrap justify-center gap-6 text-base md:text-lg font-semibold text-foreground/80">
           <a
-            href="https://warpcast.com/chukinice"
+            href="https://farcaster.xyz/chukinice"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors hover:text-[#B7FF00]"
@@ -12,28 +12,12 @@ export function Footer() {
             Farcaster
           </a>
           <a
-            href="https://twitter.com/chukinice"
+            href="https://x.com/chukinice"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors hover:text-[#B7FF00]"
           >
-            Twitter
-          </a>
-          <a
-            href="https://t.me/chukinice"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-[#B7FF00]"
-          >
-            Telegram
-          </a>
-          <a
-            href="https://github.com/chukinice"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-[#B7FF00]"
-          >
-            GitHub
+            X
           </a>
         </div>
 

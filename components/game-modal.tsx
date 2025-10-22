@@ -83,40 +83,40 @@ export function GameModal({ game, open, onOpenChange }: GameModalProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="w-full sm:max-w-[96vw] lg:max-w-[1440px] max-h-[calc(100vh-6vw)] overflow-hidden border border-border/60 bg-card/95 p-0 shadow-2xl">
+      <DialogContent className="w-full sm:max-w-[96vw] lg:max-w-[1440px] max-h-[90vh] sm:max-h-[calc(100vh-6vw)] overflow-hidden border border-border/60 bg-card sm:bg-card/95 p-0 shadow-2xl">
         <DialogHeader>
           <DialogTitle className="sr-only">{game.title}</DialogTitle>
         </DialogHeader>
 
-        <div className="relative">
-          <div className="relative grid gap-8 p-6 md:p-10 lg:grid-cols-[1.15fr_0.85fr] items-center">
-            <div className="space-y-8 text-center lg:text-left">
+        <div className="relative max-h-[calc(90vh-6rem)] sm:max-h-none overflow-y-auto">
+          <div className="relative grid gap-6 sm:gap-8 p-5 sm:p-6 md:p-10 lg:grid-cols-[1.15fr_0.85fr] items-center">
+            <div className="space-y-7 sm:space-y-8 text-center lg:text-left">
               <div className="space-y-4">
-                <h3 className="text-5xl md:text-6xl font-bold text-balance">
+                <h3 className="text-3xl sm:text-5xl md:text-6xl font-bold text-balance">
                   {game.title}
                 </h3>
-                <p className="text-lg md:text-xl text-muted-foreground text-balance">
+                <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-balance">
                   {game.subtitle}
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+              <div className="flex flex-wrap gap-2.5 sm:gap-3 justify-center lg:justify-start">
                 {game.tags.map((tag) => (
                   <Badge
                     key={tag}
                     variant="secondary"
-                    className="px-4 py-2 text-sm md:text-base bg-secondary/80 hover:bg-[#B7FF00]/10 hover:text-[#B7FF00] transition-colors"
+                    className="px-3 py-1.5 text-xs sm:text-sm md:text-base bg-secondary/80 hover:bg-[#B7FF00]/10 hover:text-[#B7FF00] transition-colors"
                   >
                     {tag}
                   </Badge>
                 ))}
               </div>
 
-              <p className="text-foreground/80 text-xl md:text-2xl leading-relaxed text-pretty">
+              <p className="text-foreground/80 text-base sm:text-lg md:text-2xl leading-relaxed text-pretty">
                 {game.description}
               </p>
 
-              <div className="flex flex-wrap lg:flex-nowrap gap-3 md:gap-5 justify-center lg:justify-start">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-5 justify-items-stretch">
                 {featureStats.map(
                   ({
                     label,
@@ -131,25 +131,25 @@ export function GameModal({ game, open, onOpenChange }: GameModalProps) {
                   }) => (
                     <div
                       key={label}
-                      className={`group relative flex-1 min-w-[120px] max-w-[160px] rounded-3xl border ${border} ${bg} px-3 py-4 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20`}
+                      className={`group relative rounded-3xl border ${border} ${bg} px-3 py-4 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20`}
                     >
                       <div
                         className={`pointer-events-none absolute inset-0 bg-linear-to-r ${gradient} via-transparent to-transparent opacity-0 group-hover:opacity-40 blur-2xl transition-opacity`}
                       />
                       <div className="relative flex items-center gap-3">
                         <span
-                          className={`inline-flex h-8 w-8 items-center justify-center rounded-full bg-background/80 ring-2 ${ring}`}
+                          className={`inline-flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-background/80 ring-2 ${ring}`}
                         >
                           <Icon />
                         </span>
                         <div className="space-y-1 text-left">
                           <p
-                            className={`text-[0.6rem] md:text-xs uppercase tracking-[0.2em] ${labelColor}`}
+                            className={`text-[0.58rem] sm:text-[0.6rem] md:text-xs uppercase tracking-[0.2em] ${labelColor}`}
                           >
                             {label}
                           </p>
                           <p
-                            className={`text-base md:text-lg font-semibold ${valueColor}`}
+                            className={`text-sm sm:text-base md:text-lg font-semibold ${valueColor}`}
                           >
                             {value}
                           </p>
@@ -159,10 +159,10 @@ export function GameModal({ game, open, onOpenChange }: GameModalProps) {
                   )
                 )}
               </div>
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-2">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-2">
                 <Button
                   size="lg"
-                  className="bg-[#B7FF00] hover:bg-[#B7FF00]/90 text-black font-semibold group h-auto px-8 md:px-12 py-4 md:py-5 text-lg md:text-xl shadow-none"
+                  className="bg-[#B7FF00] hover:bg-[#B7FF00]/90 text-black font-semibold group h-auto w-full sm:w-auto px-7 md:px-12 py-4 md:py-5 text-base sm:text-lg md:text-xl shadow-none"
                   asChild
                 >
                   <a
@@ -176,7 +176,7 @@ export function GameModal({ game, open, onOpenChange }: GameModalProps) {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-[#B7FF00] text-[#B7FF00] hover:bg-[#B7FF00]/10 font-semibold group bg-transparent h-auto px-8 md:px-12 py-4 md:py-5 text-lg md:text-xl shadow-none"
+                  className="border-[#B7FF00] text-[#B7FF00] hover:bg-[#B7FF00]/10 font-semibold group bg-transparent h-auto w-full sm:w-auto px-7 md:px-12 py-4 md:py-5 text-base sm:text-lg md:text-xl shadow-none"
                   asChild
                   onClick={() => onOpenChange(false)}
                 >
@@ -186,7 +186,7 @@ export function GameModal({ game, open, onOpenChange }: GameModalProps) {
             </div>
 
             <div className="relative w-full flex justify-center">
-              <div className="relative aspect-2/3 w-full max-w-xs sm:max-w-sm lg:max-w-sm xl:max-w-md overflow-hidden rounded-4xl border-[3px] border-[#B7FF00]/40 max-h-[75vh]">
+              <div className="relative aspect-2/3 w-full max-w-full sm:max-w-sm lg:max-w-sm xl:max-w-md overflow-hidden rounded-4xl border-[3px] border-[#B7FF00]/40 max-h-[60vh] sm:max-h-[70vh]">
                 {isVideoAsset ? (
                   <video
                     className="h-full w-full object-cover"

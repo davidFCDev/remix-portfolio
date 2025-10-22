@@ -60,8 +60,8 @@ export default function GameGuidePage({
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border/50 sticky top-0 bg-background/95 backdrop-blur-sm z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+        <div className="container mx-auto px-4 py-3 sm:py-4">
+          <div className="flex items-center justify-start gap-2 sm:gap-3">
             <Button
               variant="ghost"
               className="text-[#B7FF00] hover:text-[#B7FF00]/80"
@@ -72,33 +72,32 @@ export default function GameGuidePage({
                 Back to Portfolio
               </Link>
             </Button>
-            <div className="text-2xl font-bold font-pixelify">
-              Hellbound Studios
-            </div>
           </div>
         </div>
       </header>
 
       {/* Game Title Section */}
-      <section className="container mx-auto px-4 py-12 text-center space-y-4">
+      <section className="container mx-auto px-4 py-10 sm:py-12 text-center space-y-4">
         <Badge
           variant="outline"
           className="border-[#B7FF00] text-[#B7FF00] font-semibold"
         >
           Game Guide
         </Badge>
-        <h1 className="text-5xl md:text-6xl font-bold">{game.title}</h1>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
+          {game.title}
+        </h1>
+        <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
           {game.subtitle}
         </p>
       </section>
 
       {/* Guide Steps */}
-      <section className="container mx-auto px-4 py-12 space-y-24">
+      <section className="container mx-auto px-4 py-10 sm:py-12 space-y-16 md:space-y-24">
         {guideSteps.map((step, index) => (
           <div
             key={step.number}
-            className={`relative grid lg:grid-cols-2 gap-12 items-center rounded-3xl bg-card/85 p-8 md:p-12 backdrop-blur-sm overflow-hidden ${
+            className={`relative grid lg:grid-cols-2 gap-10 md:gap-12 items-center rounded-3xl bg-card/85 p-6 md:p-10 lg:p-12 backdrop-blur-sm overflow-hidden ${
               index % 2 === 1 ? "lg:grid-flow-dense" : ""
             }`}
           >
@@ -113,13 +112,13 @@ export default function GameGuidePage({
             <div className={`${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
               <div className="relative">
                 {/* Number Circle */}
-                <div className="absolute -top-8 -left-8 w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#B7FF00] flex items-center justify-center z-10 border-4 border-background">
-                  <span className="text-3xl md:text-4xl font-semibold text-black">
+                <div className="absolute -top-7 -left-7 w-16 h-16 md:w-24 md:h-24 rounded-full bg-[#B7FF00] flex items-center justify-center z-10 border-4 border-background">
+                  <span className="text-2xl md:text-4xl font-semibold text-black">
                     {step.number}
                   </span>
                 </div>
                 {/* Image Container */}
-                <div className="aspect-2/3 w-full max-w-md mx-auto relative overflow-hidden rounded-3xl border-2 border-[#B7FF00]/30">
+                <div className="aspect-2/3 w-full max-w-xs sm:max-w-md mx-auto relative overflow-hidden rounded-3xl border-2 border-[#B7FF00]/30">
                   <img
                     src={step.image || "/placeholder.svg"}
                     alt={step.title}
@@ -131,14 +130,14 @@ export default function GameGuidePage({
 
             {/* Content */}
             <div
-              className={`space-y-6 ${
+              className={`space-y-5 ${
                 index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""
               }`}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-balance">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-balance">
                 {step.title}
               </h2>
-              <p className="text-xl text-foreground/80 leading-relaxed text-pretty">
+              <p className="text-lg sm:text-xl text-foreground/80 leading-relaxed text-pretty">
                 {step.body}
               </p>
             </div>
@@ -147,9 +146,11 @@ export default function GameGuidePage({
       </section>
 
       {/* CTA Section */}
-      <section className="container mx-auto px-4 py-16 text-center space-y-6">
-        <h2 className="text-4xl md:text-5xl font-bold">Ready to play?</h2>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+      <section className="container mx-auto px-4 py-14 sm:py-16 text-center space-y-5">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+          Ready to play?
+        </h2>
+        <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
           Now that you've mastered the basics, it's time to put your skills to
           the test!
         </p>

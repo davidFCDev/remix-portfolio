@@ -67,40 +67,40 @@ export function FeaturedGame() {
   ];
 
   return (
-    <section className="relative overflow-hidden rounded-3xl bg-card/60 backdrop-blur-sm py-16 md:py-24 mt-16 min-h-[70vh] flex items-center">
+    <section className="relative overflow-hidden rounded-3xl bg-card/60 backdrop-blur-sm py-12 md:py-24 mt-16 min-h-[70vh] flex items-center">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(183,255,0,0.08),transparent_55%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(183,255,0,0.05),transparent_55%)]" />
       </div>
 
-      <div className="relative container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center lg:items-center gap-14 lg:gap-24 w-full">
-          <div className="flex-1 space-y-8 text-center lg:text-left">
-            <div className="space-y-4">
-              <p className="uppercase tracking-[0.3em] text-xs md:text-sm text-[#B7FF00]/70">
+      <div className="relative container mx-auto px-4 sm:px-6">
+        <div className="flex flex-col lg:flex-row items-center lg:items-center gap-12 lg:gap-24 w-full">
+          <div className="flex-1 space-y-6 sm:space-y-8 text-center lg:text-left">
+            <div className="space-y-3 sm:space-y-4">
+              <p className="uppercase tracking-[0.25em] text-xs md:text-sm text-[#B7FF00]/70">
                 Latest Release
               </p>
-              <h2 className="text-5xl md:text-6xl font-bold text-balance">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-balance">
                 {latestGame.title}
               </h2>
-              <p className="text-lg md:text-xl text-muted-foreground text-balance">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-balance">
                 {latestGame.subtitle}
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+            <div className="flex flex-wrap gap-2.5 sm:gap-3 justify-center lg:justify-start">
               {latestGame.tags.map((tag) => (
                 <Badge
                   key={tag}
                   variant="secondary"
-                  className="px-4 py-2 text-sm md:text-base bg-secondary/80 hover:bg-[#B7FF00]/10 hover:text-[#B7FF00] transition-colors"
+                  className="px-4 py-1.5 text-xs sm:text-sm md:text-base bg-secondary/80 hover:bg-[#B7FF00]/10 hover:text-[#B7FF00] transition-colors"
                 >
                   {tag}
                 </Badge>
               ))}
             </div>
 
-            <p className="text-foreground/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto lg:mx-0">
+            <p className="text-foreground/80 text-lg sm:text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto lg:mx-0">
               {latestGame.description}
             </p>
 
@@ -119,7 +119,7 @@ export function FeaturedGame() {
                 }) => (
                   <div
                     key={label}
-                    className={`group relative flex-1 min-w-[120px] max-w-[160px] rounded-3xl border ${border} ${bg} px-3 py-4 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20`}
+                    className={`group relative flex-1 min-w-[140px] max-w-[180px] rounded-3xl border ${border} ${bg} px-4 py-5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20`}
                   >
                     <div
                       className={`pointer-events-none absolute inset-0 bg-linear-to-r ${gradient} via-transparent to-transparent opacity-0 group-hover:opacity-40 blur-2xl transition-opacity`}
@@ -130,14 +130,14 @@ export function FeaturedGame() {
                       >
                         <Icon />
                       </span>
-                      <div className="space-y-1 text-left">
+                      <div className="space-y-0.5 text-left">
                         <p
-                          className={`text-[0.6rem] md:text-xs uppercase tracking-[0.2em] ${labelColor}`}
+                          className={`text-[0.65rem] sm:text-xs uppercase tracking-[0.2em] ${labelColor}`}
                         >
                           {label}
                         </p>
                         <p
-                          className={`text-base md:text-lg font-semibold ${valueColor}`}
+                          className={`text-lg md:text-xl font-semibold ${valueColor}`}
                         >
                           {value}
                         </p>
@@ -148,10 +148,10 @@ export function FeaturedGame() {
               )}
             </div>
 
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-6">
               <Button
                 size="lg"
-                className="bg-[#B7FF00] hover:bg-[#B7FF00]/90 text-black font-semibold group h-auto px-8 md:px-12 py-4 md:py-5 text-lg md:text-xl shadow-none"
+                className="bg-[#B7FF00] hover:bg-[#B7FF00]/90 text-black font-semibold group h-auto w-full sm:w-auto px-8 md:px-12 py-4 md:py-5 text-lg md:text-xl shadow-none"
                 asChild
               >
                 <a
@@ -165,7 +165,7 @@ export function FeaturedGame() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-[#B7FF00] text-[#B7FF00] hover:bg-[#B7FF00]/10 font-semibold group bg-transparent h-auto px-8 md:px-12 py-4 md:py-5 text-lg md:text-xl shadow-none"
+                className="border-[#B7FF00] text-[#B7FF00] hover:bg-[#B7FF00]/10 font-semibold group bg-transparent h-auto w-full sm:w-auto px-8 md:px-12 py-4 md:py-5 text-lg md:text-xl shadow-none"
                 asChild
               >
                 <Link href={`/games/${latestGame.id}`}>Guide</Link>

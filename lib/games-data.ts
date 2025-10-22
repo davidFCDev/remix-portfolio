@@ -46,7 +46,7 @@ export const games: Game[] = [
       {
         title: "Save your runs",
         image: "/images/pengu/Pengu-2.png",
-        body: "Bookmark your score and return any time to continue climbing the seasonal leaderboards.",
+        body: "Save your score and return any time to continue climbing the leaderboards.",
       },
       {
         title: "Use your ability",
@@ -99,7 +99,7 @@ export const games: Game[] = [
     title: "Forgotten Path",
     subtitle: "Turn-based RPG battles",
     description:
-      "Assemble a trio of spellcasters—warlock, mage, and priest—and tackle five escalating stages of wave-based combat. Rotate abilities strategically, keep every mage alive, and push through the gauntlet to unlock the secret ending.",
+      "Assemble a trio of spellcasters—warlock, mage, and priest—and tackle five escalating levels of wave-based combat. Rotate abilities strategically, keep every mage alive, and push through the gauntlet to unlock the secret ending.",
     tags: ["RPG", "Strategy", "Action"],
     thumbnail: "/images/forgotten/Forgotten-pathdrop.png",
     videoUrl: "/videos/forgotten-clip.mp4",
@@ -112,9 +112,9 @@ export const games: Game[] = [
     },
     guide: [
       {
-        title: "Clear every tier",
+        title: "Clear every map",
         image: "/images/forgotten/Forgotten-1.png",
-        body: "Each of the four tiers culminates in two waves and a boss—defeat them all to reach the final seal.",
+        body: "Each of the four maps culminates in two waves and a boss—defeat them all to reach the final seal.",
       },
       {
         title: "Keep the mages alive",
@@ -129,7 +129,7 @@ export const games: Game[] = [
       {
         title: "Consult the monster codex",
         image: "/images/forgotten/Forgotten-4.png",
-        body: "Need intel mid-run? Check the codex to anticipate attack patterns and prep your counter-magic.",
+        body: "Need intel mid-run? Check the códex to anticipate attack patterns and prep your counter-magic.",
       },
     ],
   },
@@ -226,7 +226,7 @@ export const games: Game[] = [
       {
         title: "Draft your hero",
         image: "/images/bubble/Bubble-1.png",
-        body: "Swap between sharpshooter, disruptor, or support playstyles—each hero bends the board in a different direction.",
+        body: "Swap between your favorite hero to bend the board in a different direction.",
       },
       {
         title: "Line up the shots",
@@ -279,7 +279,7 @@ export const games: Game[] = [
     title: "Crypto Mahjong",
     subtitle: "Meme-coin tile matcher",
     description:
-      "Collapse trios of meme-coin tiles before the clock expires. Chain clears to flood the board with fresh crypto icons and chase leaderboard-fast completions.",
+      "Match trios of meme-coin tiles before the clock expires. Chain clears to flood the board with fresh crypto icons and chase leaderboard-fast completions.",
     tags: ["Puzzle", "Arcade", "Casual"],
     thumbnail: "/images/mahjong/Mahjong-3.png",
     videoUrl: "/videos/mahjong-clip.mp4",
