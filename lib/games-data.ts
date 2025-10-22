@@ -208,13 +208,36 @@ export const games: Game[] = [
   },
   {
     id: "6",
-    title: "Mystic Tales",
-    subtitle: "Story-driven RPG",
+    title: "Bubble Bluster",
+    subtitle: "Bubble-matching arcade classic",
     description:
-      "Immerse yourself in a rich fantasy world filled with magic, mystery, and adventure. Make choices that shape your destiny, battle fearsome creatures, and uncover ancient secrets in this epic story-driven RPG.",
-    tags: ["RPG", "Story", "Fantasy"],
-    thumbnail: "/mystic-tales-rpg-game.jpg",
-    videoUrl: "/mystic-tales-gameplay.jpg",
-    playUrl: "https://example.com/play/mystic-tales",
+      "Rotate through three heroes with signature abilities and keep cascading clusters in check before the wall of bubbles crashes past the red line.",
+    tags: ["Arcade", "Puzzle", "Casual"],
+    thumbnail: "/images/bubble/Bubble-3.png",
+    videoUrl: "/videos/bubble-clip.mp4",
+    playUrl: "https://remix.gg/g/Y58Z5vSLnB41",
+    stats: {
+      plays: "+52.2k",
+      users: "+11.4k",
+      time: "+6.2k h",
+      rating: "96%",
+    },
+    guide: [
+      {
+        title: "Draft your hero",
+        image: "/images/bubble/Bubble-1.png",
+        body: "Swap between sharpshooter, disruptor, or support playstyles—each hero bends the board in a different direction.",
+      },
+      {
+        title: "Line up the shots",
+        image: "/images/bubble/Bubble-2.png",
+        body: "Bank your angles, chain combos of three or more, and stagger pops to keep the ceiling from descending.",
+      },
+      {
+        title: "Time the ultimate",
+        image: "/images/bubble/Bubble-3.png",
+        body: "Every hero carries a once-per-stage ultimate ability—save it for the moment when the cluster pile feels unstoppable.",
+      },
+    ],
   },
 ];

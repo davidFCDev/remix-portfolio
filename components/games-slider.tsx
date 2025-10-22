@@ -2,6 +2,7 @@
 
 import { GameModal } from "@/components/game-modal";
 import { Card } from "@/components/ui/card";
+import type { CarouselApi } from "@/components/ui/carousel";
 import {
   Carousel,
   CarouselContent,
@@ -11,10 +12,64 @@ import {
 } from "@/components/ui/carousel";
 import type { Game } from "@/lib/games-data";
 import { games } from "@/lib/games-data";
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+
+const AUTOPLAY_DELAY = 5000;
 
 export function GamesSlider() {
   const [selectedGame, setSelectedGame] = useState<Game | null>(null);
+  const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
+  const autoplayTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const isInteractingRef = useRef(false);
+
+  const clearAutoplay = useCallback(() => {
+    if (autoplayTimerRef.current) {
+      clearInterval(autoplayTimerRef.current);
+      autoplayTimerRef.current = null;
+    }
+  }, []);
+
+  const startAutoplay = useCallback(() => {
+    if (!carouselApi || isInteractingRef.current) return;
+    clearAutoplay();
+    autoplayTimerRef.current = setInterval(() => {
+      if (!carouselApi) return;
+      if (carouselApi.canScrollNext()) {
+        carouselApi.scrollNext();
+      } else {
+        carouselApi.scrollTo(0);
+      }
+    }, AUTOPLAY_DELAY);
+  }, [carouselApi, clearAutoplay]);
+
+  useEffect(() => {
+    startAutoplay();
+    return () => {
+      clearAutoplay();
+    };
+  }, [startAutoplay, clearAutoplay]);
+
+  useEffect(() => {
+    if (!carouselApi) return;
+
+    const handlePointerDown = () => {
+      isInteractingRef.current = true;
+      clearAutoplay();
+    };
+
+    const handlePointerUp = () => {
+      isInteractingRef.current = false;
+      startAutoplay();
+    };
+
+    carouselApi.on("pointerDown", handlePointerDown);
+    carouselApi.on("pointerUp", handlePointerUp);
+
+    return () => {
+      carouselApi.off("pointerDown", handlePointerDown);
+      carouselApi.off("pointerUp", handlePointerUp);
+    };
+  }, [carouselApi, clearAutoplay, startAutoplay]);
 
   return (
     <section className="space-y-10 container mx-auto px-4">
@@ -37,6 +92,23 @@ export function GamesSlider() {
             slidesToScroll: 1,
             dragFree: true,
             loop: true,
+          }}
+          setApi={setCarouselApi}
+          onMouseEnter={() => {
+            isInteractingRef.current = true;
+            clearAutoplay();
+          }}
+          onMouseLeave={() => {
+            isInteractingRef.current = false;
+            startAutoplay();
+          }}
+          onTouchStart={() => {
+            isInteractingRef.current = true;
+            clearAutoplay();
+          }}
+          onTouchEnd={() => {
+            isInteractingRef.current = false;
+            startAutoplay();
           }}
           className="w-full"
         >
