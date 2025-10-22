@@ -135,14 +135,37 @@ export const games: Game[] = [
   },
   {
     id: "4",
-    title: "Word Master",
-    subtitle: "Daily word challenges",
+    title: "The Open-Sea",
+    subtitle: "Pirate-styled NFT puzzle",
     description:
-      "Test your vocabulary and word-finding skills with daily challenges. Compete with friends, unlock achievements, and expand your linguistic prowess in this engaging word game that combines education with entertainment.",
-    tags: ["Word", "Educational", "Daily"],
-    thumbnail: "/word-master-mobile-game.jpg",
-    videoUrl: "/word-master-gameplay.jpg",
-    playUrl: "https://example.com/play/word-master",
+      "Sail a gauntlet of increasingly intricate puzzles inspired by the OpenSea marketplace. Flip switches, route twin pirates, and haul treasure while racing the tide for leaderboard glory.",
+    tags: ["Adventure", "Strategy", "Puzzle"],
+    thumbnail: "/images/opensea/Opensea-pathdrop.png",
+    videoUrl: "/videos/opensea-clip.mp4",
+    playUrl: "https://remix.gg/g/6d6bc837-fad6-47ee-91cd-cdfeb472750a",
+    stats: {
+      plays: "+21K",
+      users: "+7K",
+      time: "+305h",
+      rating: "96%",
+    },
+    guide: [
+      {
+        title: "Solve every puzzle",
+        image: "/images/opensea/Opensea-1.png",
+        body: "Each map demands a fresh approach—experiment with levers, tides, and portals to clear the board.",
+      },
+      {
+        title: "Command the twin crew",
+        image: "/images/opensea/Opensea-2.png",
+        body: "Mirror-linked pirates move together. Navigate both safely to the exit without stranding your mate.",
+      },
+      {
+        title: "Collect the treasure haul",
+        image: "/images/opensea/Opensea-3.png",
+        body: "Snag every coin before escaping to boost your score and climb the Open-Sea leaderboards.",
+      },
+    ],
   },
   {
     id: "5",

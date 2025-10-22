@@ -50,7 +50,7 @@ export function GamesSlider() {
                   className="group h-full cursor-pointer overflow-hidden border-border/40 bg-background/60 transition-all duration-500 hover:-translate-y-2 hover:border-[#B7FF00] hover:shadow-2xl hover:shadow-[#B7FF00]/20"
                   onClick={() => setSelectedGame(game)}
                 >
-                  <div className="relative aspect-9/16 overflow-hidden">
+                  <div className="relative aspect-2/3 overflow-hidden">
                     <img
                       src={game.thumbnail || "/placeholder.svg"}
                       alt={game.title}
