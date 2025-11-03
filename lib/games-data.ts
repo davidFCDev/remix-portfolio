@@ -22,6 +22,40 @@ export interface Game {
 
 export const games: Game[] = [
   {
+    id: "hidden-veefriends",
+    title: "Hidden VeeFriends",
+    subtitle: "Character search loop game",
+    description:
+      "A game inspired by the classic Where's Waldo, featuring a collaboration with VeeFriends NFT company. Search for hidden characters across vibrant maps, unlock collectible cards, and level up your collection in this charming seek-and-find adventure.",
+    tags: ["Cards", "Cartoon", "Puzzle"],
+    thumbnail: "/images/veefriends/veefriends-2.png",
+    videoUrl: "/videos/veefriends-clip.mp4",
+    playUrl: "https://remix.gg/g/8f3d671b-9e38-458d-ae3b-af467487d556",
+    stats: {
+      plays: "New",
+      users: "New",
+      time: "New",
+      rating: "100%",
+    },
+    guide: [
+      {
+        title: "Find the VeeFriend",
+        image: "/images/veefriends/veefriends-2.png",
+        body: "Explore different maps filled with various characters waiting to be discovered. Sharpen your eyes and find them all!",
+      },
+      {
+        title: "Collect them all",
+        image: "/images/veefriends/veefriends-1.png",
+        body: "Unlock all available cards and level them up. Build your collection and become the ultimate VeeFriends master.",
+      },
+      {
+        title: "Visit the shop",
+        image: "/images/veefriends/veefriends-3.png",
+        body: "Save your coins and purchase the best items to gain advantages. Smart shopping leads to faster progress!",
+      },
+    ],
+  },
+  {
     id: "1",
     title: "I Am Pengu",
     subtitle: "Platformer inspired by Pudgy Penguins",
